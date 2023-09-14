@@ -1,0 +1,19 @@
+# Workflow's name
+name: First Workflow
+
+# Event/s that trigger this workflow to execute
+# This workflow is manually triggered
+on: workflow_dispatch
+
+jobs: 
+  first-job:
+    # Define job's Runner
+    runs-on: ubuntu-latest
+    # 1 dash (-) per step
+    steps:
+      - name: Print greeting
+        # Command executed in the command line
+        run: echo "Hello World!"
+      - name: Print goodbye
+        # Command executed in the command line
+        run: echo "Done - bye!"
